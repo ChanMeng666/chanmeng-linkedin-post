@@ -1,4 +1,4 @@
-# linkedin-post — a Claude Code skill for LinkedIn and X posts
+# chanmeng-linkedin-post — a Claude Code skill for LinkedIn and X posts
 
 A [Claude Code](https://claude.com/claude-code) **skill** that takes one of your ideas and turns it
 into a post that specialists believe, non-specialists follow, and people finish. It writes for
@@ -8,7 +8,7 @@ and hands you **one markdown file**. It **never touches LinkedIn or X**: no brow
 automation, no composer. You copy, tag, attach, publish.
 
 ```
-/linkedin-post idea      # or: story / take / recap   (or just describe what you want)
+/chanmeng-linkedin-post idea      # or: story / take / recap   (or just describe what you want)
 ```
 
 ## What it is built on
@@ -104,7 +104,7 @@ enforces the budget. X posts stay plain.
 ## Repository layout
 
 ```
-SKILL.md            The orchestrator (invoked as /linkedin-post)
+SKILL.md            The orchestrator (invoked as /chanmeng-linkedin-post)
 references/         voice · platforms · brand · visuals · recap playbook · hashtag bank
 templates/          brand.css · dither.js · visuals/ (stat, compare, bars, steps, hero) · quote card · Mermaid theme · logo
 scripts/            count · style · render-html · render-mermaid · render-card · render-video · render-monkey
@@ -133,8 +133,8 @@ pip install -r ~/.claude/skills/chan-monkey-illustrations/requirements.txt
 Without it, `render-monkey.mjs` exits 2 and the skill falls back to the hero plate.
 
 Text-only posts and `count.mjs` need nothing installed beyond Node. To make the skill invocable as
-`/linkedin-post`, expose this folder to Claude Code's skills directory (for example a junction or
-symlink at `~/.claude/skills/linkedin-post`).
+`/chanmeng-linkedin-post`, expose this folder to Claude Code's skills directory (for example a junction or
+symlink at `~/.claude/skills/chanmeng-linkedin-post`).
 
 ## Security
 

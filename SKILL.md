@@ -1,5 +1,5 @@
 ---
-name: linkedin-post
+name: chanmeng-linkedin-post
 description: Use when Chan Meng wants to turn a thought into a post for LinkedIn, X (Twitter), or both — "write a LinkedIn post about…", "tweet this", "make this an X thread", "post about what I just read", "recap the meetup I went to". Four modes — story (something that happened and what it changed), idea (a claim she can back), take (a reaction to an article or release), recap (an event, crediting people). Writes in a voice system built from two writers she admires, writes each platform's post separately for its own audience, gives every post a visual — a Mermaid diagram or an HTML-rendered layout when the content has a shape, otherwise a hand-drawn illustration of the brand monkey acting out the idea (via the chan-monkey-illustrations skill) — and hands back ONE markdown file. Chan posts it herself; the skill never opens LinkedIn or X.
 ---
 
@@ -43,7 +43,7 @@ Still allowed, because they aren't browser automation:
 
 ### Step 0 — Mode, platforms, and the real material
 
-**Mode**, from the `/linkedin-post <mode>` argument, else inferred, else asked once:
+**Mode**, from the `/chanmeng-linkedin-post <mode>` argument, else inferred, else asked once:
 
 | Mode | Use when |
 |------|----------|
