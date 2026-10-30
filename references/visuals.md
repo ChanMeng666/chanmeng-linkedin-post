@@ -280,7 +280,7 @@ picks which to attach. A post takes an image or a video, not both.
 ## 8. Monkey illustration
 
 The brand monkey, from the logo, acting out the post's one idea in a hand-drawn scene. Made by
-the `chan-monkey-illustrations` skill: an image model (OpenAI `gpt-image-2`) with the logo
+the `chanmeng-monkey-illustrations` skill: an image model (OpenAI `gpt-image-2`) with the logo
 attached as a reference image, so the head is always the real mark.
 
 **Read first:** that skill's `references/monkey-ip.md` (the character), `composition-patterns.md`

@@ -57,11 +57,11 @@ work for? The content's shape picks the route, and every post leaves with one vi
 | a before/after, one number, a few numbers, a straight sequence | HTML layout → PNG | `templates/visuals/{compare,stat,bars,steps}.html` + `scripts/render-html.mjs` |
 | one quotable line | quote card | `scripts/render-card.mjs` |
 | something else that deserves a layout | bespoke HTML → PNG | `templates/brand.css` + `scripts/render-html.mjs` |
-| an idea, a story, an opinion, a take: no numbers, no wiring | monkey illustration | [chan-monkey-illustrations](https://github.com/ChanMeng666/chan-monkey-illustrations) + `scripts/render-monkey.mjs` |
+| an idea, a story, an opinion, a take: no numbers, no wiring | monkey illustration | [chanmeng-monkey-illustrations](https://github.com/ChanMeng666/chanmeng-monkey-illustrations) + `scripts/render-monkey.mjs` |
 | a cover, when the monkey route can't run | hero plate | `templates/visuals/hero.html` + `templates/dither.js` |
 
 **One route uses an image model: the monkey.** The
-[chan-monkey-illustrations](https://github.com/ChanMeng666/chan-monkey-illustrations) skill sends
+[chanmeng-monkey-illustrations](https://github.com/ChanMeng666/chanmeng-monkey-illustrations) skill sends
 the logo as a reference image to OpenAI `gpt-image-2`, so the head is always the real mark; the
 script swaps in the basalt ground and the brief holds it to one orange accent. The LinkedIn
 render is recomposed into the X shape, so both platforms carry the same picture. Numbers,
@@ -122,7 +122,7 @@ npx playwright install chromium
 ```
 
 For the monkey route, install the
-[chan-monkey-illustrations](https://github.com/ChanMeng666/chan-monkey-illustrations) skill at
+[chanmeng-monkey-illustrations](https://github.com/ChanMeng666/chanmeng-monkey-illustrations) skill at
 `~/.claude/skills/chan-monkey-illustrations` (or point `CHAN_MONKEY_SKILL` at it), then:
 
 ```bash

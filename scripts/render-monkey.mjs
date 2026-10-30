@@ -1,4 +1,4 @@
-// Render a Chan monkey illustration for a post, through the chan-monkey-illustrations skill
+// Render a Chan monkey illustration for a post, through the chanmeng-monkey-illustrations skill
 // (an image model anchored on the logo as a reference image). The brief is a prompt file
 // written from that skill's references/prompt-template.md and the post profile in
 // references/visuals.md §8.
@@ -39,8 +39,8 @@ function findSkill() {
   const here = path.dirname(fileURLToPath(import.meta.url));
   const candidates = [
     process.env.CHAN_MONKEY_SKILL,
-    path.join(os.homedir(), '.claude', 'skills', 'chan-monkey-illustrations'),
-    path.resolve(here, '..', '..', 'chan-monkey-illustrations', 'chan-monkey-illustrations'),
+    path.join(os.homedir(), '.claude', 'skills', 'chanmeng-monkey-illustrations'),
+    path.resolve(here, '..', '..', 'chanmeng-monkey-illustrations', 'chanmeng-monkey-illustrations'),
   ].filter(Boolean);
   return candidates.find((dir) => fs.existsSync(path.join(dir, 'scripts', 'generate_image.py')));
 }
@@ -64,7 +64,7 @@ if (args.from && !fs.existsSync(args.from)) { console.error(`--from image not fo
 
 const skill = findSkill();
 if (!skill) {
-  console.error('chan-monkey-illustrations skill not found (set CHAN_MONKEY_SKILL). Use the hero plate instead.');
+  console.error('chanmeng-monkey-illustrations skill not found (set CHAN_MONKEY_SKILL). Use the hero plate instead.');
   process.exit(2);
 }
 const python = findPython();
