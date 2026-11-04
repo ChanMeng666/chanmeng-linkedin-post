@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Claude Code plugin (the newest copy in the plugin cache; honours `CLAUDE_CONFIG_DIR`).
 - Docs pointed at the old `~/.claude/skills/chan-monkey-illustrations` path; they now use
   `chanmeng-monkey-illustrations`, which the script already looked for.
+- A plugin icon, `.claude-plugin/icon.png`: the Chan Meng monkey on a Caldera palette colour, so catalogs show it instead of a letter.
 
 ## [2.3.0] - 2026-10-20
 
