@@ -114,6 +114,21 @@ output/             Generated drafts, one folder per run (gitignored)
 
 ## Setup
 
+### As a Claude Code plugin (recommended)
+
+```text
+/plugin install chanmeng-linkedin-post --marketplace ChanMeng666/chanmeng-linkedin-post
+```
+
+On Claude Code older than 2.1.275, add the marketplace first:
+
+```text
+/plugin marketplace add ChanMeng666/chanmeng-linkedin-post
+/plugin install chanmeng-linkedin-post@chanmeng-linkedin-post
+```
+
+### Manual install
+
 ```bash
 npm install
 npx playwright install chromium
@@ -123,10 +138,12 @@ npx playwright install chromium
 
 For the monkey route, install the
 [chanmeng-monkey-illustrations](https://github.com/ChanMeng666/chanmeng-monkey-illustrations) skill at
-`~/.claude/skills/chan-monkey-illustrations` (or point `CHAN_MONKEY_SKILL` at it), then:
+`~/.claude/skills/chanmeng-monkey-illustrations`, or install it as a Claude Code plugin
+(`/plugin install chanmeng-monkey-illustrations --marketplace ChanMeng666/chanmeng-monkey-illustrations`),
+or point `CHAN_MONKEY_SKILL` at it. Then:
 
 ```bash
-pip install -r ~/.claude/skills/chan-monkey-illustrations/requirements.txt
+pip install -r ~/.claude/skills/chanmeng-monkey-illustrations/requirements.txt
 # OPENAI_API_KEY in the environment, or in a .env in this repo or in that skill's folder
 ```
 

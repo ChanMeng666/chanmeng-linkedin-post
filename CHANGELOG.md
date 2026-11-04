@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.4.0] - 2026-11-04
+
+### Added
+- Claude Code plugin packaging: `.claude-plugin/plugin.json` and `marketplace.json`. Install with
+  `/plugin install chanmeng-linkedin-post --marketplace ChanMeng666/chanmeng-linkedin-post`. The repo, marketplace, plugin and skill all
+  use the name `chanmeng-linkedin-post`. The manual `git clone` install still works as before.
+- CI runs `claude plugin validate --strict` on the manifests.
+
+### Fixed
+- `scripts/render-monkey.mjs` also finds the monkey-illustrations skill when it is installed as a
+  Claude Code plugin (the newest copy in the plugin cache; honours `CLAUDE_CONFIG_DIR`).
+- Docs pointed at the old `~/.claude/skills/chan-monkey-illustrations` path; they now use
+  `chanmeng-monkey-illustrations`, which the script already looked for.
+
 ## [2.3.0] - 2026-10-20
 
 Every post now leaves with a visual. Where the content has no shape to draw (a story, an

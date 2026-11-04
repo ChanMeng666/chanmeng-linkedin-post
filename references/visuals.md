@@ -285,7 +285,7 @@ attached as a reference image, so the head is always the real mark.
 
 **Read first:** that skill's `references/monkey-ip.md` (the character), `composition-patterns.md`
 (how to invent the metaphor), `prompt-template.md` (the brief), and the "Social post profile"
-in its `style-dna.md`. The skill lives at `~/.claude/skills/chan-monkey-illustrations/`.
+in its `style-dna.md`. The skill lives at `~/.claude/skills/chanmeng-monkey-illustrations/`, or in the plugin cache when installed as a plugin.
 
 1. **Find the metaphor.** Take the post's spine (Step 2) and turn it into a physical verb and a
    low-tech object, then give the verb to the monkey. The idea must still work if a reader

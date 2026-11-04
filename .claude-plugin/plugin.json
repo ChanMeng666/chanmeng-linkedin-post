@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "chanmeng-linkedin-post",
+  "version": "2.4.0",
+  "description": "Claude Code skill: turns an idea into on-brand LinkedIn and X posts (story, idea, take, recap), gives every post a visual — Mermaid, HTML-rendered, or a hand-drawn brand-monkey illustration — and hands back one markdown file. Never opens LinkedIn or X; you post.",
+  "author": {
+    "name": "Chan Meng",
+    "url": "https://github.com/ChanMeng666"
+  },
+  "homepage": "https://github.com/ChanMeng666/chanmeng-linkedin-post",
+  "repository": "https://github.com/ChanMeng666/chanmeng-linkedin-post",
+  "license": "MIT",
+  "keywords": [
+    "ai-agents",
+    "ai-illustration",
+    "automation",
+    "claude-code",
+    "claude-code-skill",
+    "claude-skills",
+    "content-creation",
+    "image-generation",
+    "linkedin",
+    "markdown",
+    "mermaid",
+    "openai",
+    "personal-branding",
+    "playwright",
+    "social-media",
+    "twitter",
+    "x-twitter"
+  ],
+  "skills": [
+    "./"
+  ]
+}

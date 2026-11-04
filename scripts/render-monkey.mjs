@@ -11,8 +11,9 @@
 //   the same picture instead of two different generations.
 // - Overwrites <output.png>; the brief is copied to <output dir>/prompts/<name>.txt.
 //
-// The skill is found at $CHAN_MONKEY_SKILL, else ~/.claude/skills/chan-monkey-illustrations,
-// else the sibling repo ../chan-monkey-illustrations/chan-monkey-illustrations.
+// The skill is found at $CHAN_MONKEY_SKILL, else ~/.claude/skills/chanmeng-monkey-illustrations,
+// else the newest copy installed as a Claude Code plugin, else the sibling repo
+// ../chanmeng-monkey-illustrations/chanmeng-monkey-illustrations.
 // Needs Python 3 with `openai`, `pillow`, `numpy`, and OPENAI_API_KEY (environment, a .env in
 // this repo, or a .env in the skill folder).
 // Exits 2 when the skill, Python or the key is missing: fall back to the hero plate (§6).
@@ -35,11 +36,23 @@ function parseArgs(argv) {
   return out;
 }
 
+// Plugin installs live at <config>/plugins/cache/<marketplace>/<plugin>/<version>/.
+// Newest version first.
+function pluginCopies() {
+  const config = process.env.CLAUDE_CONFIG_DIR || path.join(os.homedir(), '.claude');
+  const root = path.join(config, 'plugins', 'cache', 'chanmeng-monkey-illustrations', 'chanmeng-monkey-illustrations');
+  if (!fs.existsSync(root)) return [];
+  return fs.readdirSync(root)
+    .sort((a, b) => b.localeCompare(a, undefined, { numeric: true }))
+    .map((v) => path.join(root, v, 'chanmeng-monkey-illustrations'));
+}
+
 function findSkill() {
   const here = path.dirname(fileURLToPath(import.meta.url));
   const candidates = [
     process.env.CHAN_MONKEY_SKILL,
     path.join(os.homedir(), '.claude', 'skills', 'chanmeng-monkey-illustrations'),
+    ...pluginCopies(),
     path.resolve(here, '..', '..', 'chanmeng-monkey-illustrations', 'chanmeng-monkey-illustrations'),
   ].filter(Boolean);
   return candidates.find((dir) => fs.existsSync(path.join(dir, 'scripts', 'generate_image.py')));
